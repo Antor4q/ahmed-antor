@@ -7,12 +7,21 @@ import Services from "@/components/home/Services";
 import Testimonials from "@/components/home/Testimonials";
 import WhyMe from "@/components/home/WhyMe";
 
+import { ProgressiveBlur } from "@/components/ui/progressive-blur";
+
 
 
 export default function Home() {
   return (
    <div className="relative">
+    
+  
+
   <Banner/>
+
+  
+
+  
   <Brands/>
   <MyStory/>
   <WhyMe/>
@@ -20,7 +29,11 @@ export default function Home() {
   <Testimonials/>
   <Contact/>
   <Footer/>
- 
+ <ProgressiveBlur
+  height="260px"
+  position="bottom"
+  className="fixed left-0 w-full z-50"
+/>
    </div>
   );
 }
