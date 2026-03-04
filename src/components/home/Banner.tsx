@@ -1,12 +1,12 @@
-import { FiArrowRight } from "react-icons/fi";
-import ResizeHandle from "../flipText/ResizeHandle";
+// import { FiArrowRight } from "react-icons/fi";
+// import ResizeHandle from "../flipText/ResizeHandle";
 import { cn } from "../utils/utils";
 import my from "../../../public/mark.png"
 import Image from "next/image";
 import log from "../../../public/pooo.png"
 import log2 from "../../../public/gablin.png"
-import Link from "next/link";
-import { SiFsecure } from "react-icons/si";
+// import Link from "next/link";
+// import { SiFsecure } from "react-icons/si";
 
 
 
@@ -30,15 +30,18 @@ const Banner = () => {
        <div className="absolute w-[250px] h-[250px] right-0 z-50 bottom-0 rounded-full bg-[#d5f139]  opacity-100 blur-[150px]"></div>
        {/* new design */}
       <div className="w-full">
+
+
+        
       
          <p className="absolute top-60 left-8 text-2xl  font-bold text-[#073322] font-sans">
   BRANDING . DESIGNING . DEVELOPMENT
   </p>
          <h3 className="absolute top-1/2 -translate-y-1/2 text-[180px]  font-bold text-[#010b08] font-sans">
-    IOXORA
+    AHMED
   </h3>
          <h3 className="absolute right-0 top-1/3 -translate-y-1/3 text-[180px] font-bold text-black font-sans">
-   AGENCY
+   ANTOR
   </h3>
          <p className="absolute right-0 top-3/5 -translate-y-3/5 w-[500px] text- font-bold text-black font-sans">
    I’m Ahmed Antor — Full Stack Developer (MERN) and Founder of ioxora, a web design & development agency that helps businesses build and manage web applications efficiently, delivering user-friendly solutions that support growth.
