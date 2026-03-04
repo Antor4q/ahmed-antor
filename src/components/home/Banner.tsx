@@ -32,7 +32,7 @@ const Banner = () => {
       <div className="w-full">
 
 
-        
+
       
          <p className="absolute top-60 left-8 text-2xl  font-bold text-[#073322] font-sans">
   BRANDING . DESIGNING . DEVELOPMENT
@@ -52,7 +52,7 @@ const Banner = () => {
       
       </div>
            <Image className="absolute bottom-0 right-0" src={log2} width={200} height={200} alt="myPhoto"/>
-           <Image className="absolute top-0 -left-56" src={log} width={200} height={200} alt="myPhoto"/>
+           {/* <Image className="absolute top-0 -left-56" src={log} width={200} height={200} alt="myPhoto"/> */}
 
       <div>
         {/* left sight content */}
