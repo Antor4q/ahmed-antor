@@ -52,7 +52,7 @@ const Banner = () => {
       
       </div>
            <Image className="absolute bottom-0 right-0" src={log2} width={200} height={200} alt="myPhoto"/>
-           {/* <Image className="absolute top-0 -left-56" src={log} width={200} height={200} alt="myPhoto"/> */}
+           {/* <Image className="absolute top-0 -left-56" src={log} width={200} height={200} alt="myPhoto"/> asfddsf*/}
 
       <div>
         {/* left sight content */}
