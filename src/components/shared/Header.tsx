@@ -29,7 +29,7 @@ const Header = () => {
       {/* 👇 Keep Navbar full width for stickiness */}
       <Navbar>
         {/* 👇 Add container inside so content aligns properly */}
-        <div className="mx-auto w-full container px-8">
+        <div className="mx-auto w-full container px-8 bg-tra">
           {/* Desktop Navigation */}
           <NavBody className="w-full justify-between">
             <NavbarLogo />

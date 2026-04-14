@@ -51,7 +51,7 @@ const Banner = () => {
          <Image className="relative -bottom-1 mx-auto" src={my} width={800} height={900} alt="myPhoto"/>
       
       </div>
-           <Image className="absolute bottom-0 right-0" src={log2} width={200} height={200} alt="myPhoto"/>
+           {/* <Image className="absolute bottom-0 right-0" src={log2} width={200} height={200} alt="myPhoto"/> */}
            {/* <Image className="absolute top-0 -left-56" src={log} width={200} height={200} alt="myPhoto"/> asfddsf*/}
 
       <div>
