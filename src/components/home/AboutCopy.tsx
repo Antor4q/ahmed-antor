@@ -47,7 +47,7 @@ const AboutCopy = () => {
    I’m Ahmed Antor — Full Stack Developer (MERN) and Founder of ioxora, a web design & development agency that helps businesses build and manage web applications efficiently, delivering user-friendly solutions that support growth.
   </p>
   <p className="text-[18px] text-white font-sans">
-   I’m Ahmed Antor — Full Stack Developer (MERN) and Founder of ioxora, a web design & development agency that helps businesses build and manage web applications
+   I’m Ahmed Antor — Full Stack Developer (MERN) and okk Founder of ioxora, a web design & development agency that helps businesses build and manage web applications
   </p>
     </div>
 
