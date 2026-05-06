@@ -5,6 +5,8 @@ import Brands from "@/components/home/Brands";
 import Contact from "@/components/home/Contact";
 import Footer from "@/components/home/Footer";
 
+import Technoloies from "@/components/home/Technoloies";
+
 
 
 import { ProgressiveBlur } from "@/components/ui/progressive-blur";
@@ -26,6 +28,7 @@ export default function Home() {
   
   <AboutCopy/>
  
+  <Technoloies/>
   
  
   <Contact/>
