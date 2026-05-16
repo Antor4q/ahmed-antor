@@ -1,126 +1,140 @@
 "use client";
 
-import { FaQuoteRight, FaStar } from "react-icons/fa";
-import ts1 from "../../../public/an3.jpg";
 import Image from "next/image";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import { FaRegCirclePlay } from "react-icons/fa6";
+import VideoCard from "../shared/VideoCard";
+import { FollowerPointerCard } from "../ui/following-pointer";
+
+type CardType = {
+  id: number;
+  type?: string;
+  title: string;
+  description: string;
+  company?: string;
+  logo?: string;
+  thumbnail?: string;
+  video?: string;
+  image?: string;
+  position?: string;
+};
 
 const Testimonials = () => {
-  const settings = {
-    infinite: true,
-    speed: 500,
-    slidesToShow: 4,
-    slidesToScroll: 1,
-    responsive: [
-      { breakpoint: 1024, settings: { slidesToShow: 3 } },
-      { breakpoint: 600, settings: { slidesToShow: 2 } },
-      { breakpoint: 480, settings: { slidesToShow: 1 } },
-    ],
-  };
-
-  const testimonialsData = [
+  const cards: CardType[] = [
     {
       id: 1,
-      name: "Forward Monkey",
-      title: "Software Starter",
-      image: ts1,
-      review:
-        "The attention to detail and innovative features have completely transformed our workflow. The attention to detail and innovative.",
-      rating: 5,
+      type: "video",
+      title: "Luxury Mortgage Experience",
+      description:
+        "Working with Ioxora completely transformed our digital presence. The experience felt premium from start to finish.",
+      company: "Ravsin",
+      logo: "/an3.jpg",
+      thumbnail: "/an3.jpg",
+      video: "/testimon.mp4",
     },
     {
       id: 2,
-      name: "Alex Johnson",
-      title: "Product Manager",
-      image: ts1,
-      review:
-        "Amazing service! Highly recommended. It boosted our team's productivity instantly.",
-      rating: 4,
+      title: "Sarah Mitchell",
+      position: "Product Designer",
+      description:
+        "The team delivered an exceptional experience with modern UI and smooth interactions.The team delivered an exceptional experience with modern UI and smooth interactions.The team delivered an exceptional experience with modern UI and smooth interactions.",
+      image: "/an3.jpg",
     },
     {
       id: 3,
-      name: "Sarah Parker",
-      title: "UI/UX Designer",
-      image: ts1,
-      review:
-        "A beautifully crafted tool with great attention to detail. Loved the experience.",
-      rating: 5,
+      title: "James Carter",
+      position: "CEO at Nova",
+      description:
+        "Clean development process and premium communication throughout the project. Clean development process and premium communication throughout the project. Clean development process and premium communication throughout the project.",
+      image: "/an3.jpg",
     },
     {
       id: 4,
-      name: "David Wilson",
-      title: "Business Owner",
-      image: ts1,
-      review:
-        "Helped our business reach the next level. Couldn't ask for more!",
-      rating: 5,
+      title: "Emily Watson",
+      position: "Marketing Lead",
+      description:
+        "One of the best creative teams we’ve worked with for branding and web experiences.One of the best creative teams we’ve worked with for branding and web experiences.One of the best creative teams we’ve worked with for branding and web experiences.",
+      image: "/an3.jpg",
     },
-     {
+    {
       id: 5,
-      name: "David Wilson",
-      title: "Business Owner",
-      image: ts1,
-      review:
-        "Helped our business reach the next level. Couldn't ask for more!",
-      rating: 5,
-    }
+      title: "Michael Brown",
+      position: "Startup Founder",
+      description:
+        "The final result exceeded expectations. Everything feels polished and premium. The final result exceeded expectations. Everything feels polished and premium. The final result exceeded expectations. Everything feels polished and premium.",
+      image: "/an3.jpg",
+    },
   ];
 
   return (
-    <div className="pb-24 overflow-hidden">
-       <div className="pointer-events-none absolute left-0 top-0 h-full w-[250px] bg-gradient-to-r from-[#ffffff8d] to-transparent z-10"></div>
-                        <div className="pointer-events-none absolute right-0 top-0 h-full w-[250px] bg-gradient-to-l from-[#ffffff8d] to-transparent z-10"></div>
-      <Slider {...settings}>
-        {testimonialsData.map((item) => (
-          <div className="h-[300px]" key={item.id}>
-            {/* SAME DESIGN — only h-auto added */}
-            <div className="bg-white relative mt-9 w-[450px] p-5 rounded-2xl shadow-sm mx-auto min-h-[260px] h-auto">
+    <section className="w-full overflow-hidden bg-[#f8fafc] py-16 md:py-24">
+      <div className="container mx-auto px-4">
+        {/* heading */}
+        <div className="mb-14 flex flex-col gap-5 md:flex-row md:items-end md:justify-between">
+          <div className="max-w-5xl">
+           
+            <p className="font-bold text-[#161616] font-sans text-lg md:text-xl">
+              Featured Projects
+            </p>
 
-              {/* image */}
-              <div className="w-[80px] h-[80px] rounded-full absolute -top-8 right-6">
-                <Image
-                  className="rounded-full w-[80px] h-[80px] object-cover"
-                  src={item.image}
-                  width={80}
-                  height={80}
-                  alt={item.name}
-                />
-              </div>
-
-              <h3 className="text-2xl font-bold text-[#3d3d3d] mt-6">
-                {item.name}
-              </h3>
-
-              <p className="font-medium mb-2 text-xl text-[#3d3d3d]">
-                {item.title}
-              </p>
-
-              <hr className="w-[200px] h-[1px]" />
-
-              <p className="font-medium my-3 text-[#3d3d3d]">
-                {item.review}
-              </p>
-
-              {/* rating */}
-              <div className="w-[200px] flex items-center justify-center absolute bottom-0 left-0 h-[40px] bg-[#d5f139] rounded-bl-2xl rounded-tr-4xl">
-                <div className="flex items-center text-xl gap-2">
-                  {Array.from({ length: item.rating }).map((_, i) => (
-                    <FaStar key={i} />
-                  ))}
-                </div>
-              </div>
-
-              {/* quote icon */}
-              <h3 className="text-[#d5f139] text-4xl font-bold absolute bottom-3 right-6">
-                <FaQuoteRight />
-              </h3>
-            </div>
+            <h3 className="font-sans text-[#161616] font-bold text-5xl md:text-[90px] leading-none mt-2">
+              WHAT THEY SAY
+            </h3>
           </div>
-        ))}
-      </Slider>
-    </div>
+
+          <p className="max-w-md font-bold text-black font-sans">
+            Real feedback from clients who trusted us to build premium digital
+            experiences for their brands.
+          </p>
+        </div>
+
+        {/* grid */}
+        <div className="grid grid-cols-1 gap-5 md:grid-cols-12 auto-rows-[260px]">
+          {/* Video Card */}
+          <VideoCard card={cards[0]} />
+
+          {/* Static Cards */}
+{cards.slice(1).map((card) => (
+  <div
+    key={card.id}
+    className="md:col-span-3"
+  >
+    <FollowerPointerCard
+      title={
+        <div className="flex items-center gap-2">
+          <Image
+            src={card.image || ""}
+            alt={card.title}
+            width={24}
+            height={24}
+            className="h-6 w-6 rounded-full border border-white object-cover"
+          />
+
+          <div className="flex flex-col leading-none">
+            <p className="text-sm font-semibold text-white">
+              {card.title}
+            </p>
+
+            <p className="text-[11px] text-white/70">
+              {card.position}
+            </p>
+          </div>
+        </div>
+      }
+    >
+      <div className="group h-full rounded-[30px] border border-black/5 bg-white p-6 shadow-sm transition-all duration-500 hover:-translate-y-1 hover:shadow-xl">
+        <div className="flex h-full flex-col">
+          {/* quote */}
+          <p className="font-medium font-sans leading-7 text-black">
+            “{card.description}”
+          </p>
+        </div>
+      </div>
+    </FollowerPointerCard>
+  </div>
+))}
+        </div>
+      </div>
+    </section>
   );
 };
 

@@ -4,8 +4,10 @@ import Banner from "@/components/home/Banner";
 import Brands from "@/components/home/Brands";
 import Contact from "@/components/home/Contact";
 import Footer from "@/components/home/Footer";
+import Projects from "@/components/home/Projects";
 
 import Technoloies from "@/components/home/Technoloies";
+import Testimonials from "@/components/home/Testimonials";
 
 
 
@@ -30,7 +32,8 @@ export default function Home() {
  
   <Technoloies/>
   
- 
+ <Projects/>
+ <Testimonials/>
   <Contact/>
   <Footer/>
  <ProgressiveBlur
