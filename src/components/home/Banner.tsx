@@ -1,7 +1,7 @@
 // import { FiArrowRight } from "react-icons/fi";
 // import ResizeHandle from "../flipText/ResizeHandle";
 import { cn } from "../utils/utils";
-import my from "../../../public/mark.png"
+import my from "../../../public/myphoto.png"
 import Image from "next/image";
 import log from "../../../public/pooo.png"
 import log2 from "../../../public/gablin.png"
@@ -40,15 +40,15 @@ const Banner = () => {
          <h3 className="absolute top-1/2 -translate-y-1/2 text-[180px]  font-bold text-[#010b08] font-sans">
     AHMED
   </h3>
-         <h3 className="absolute right-0 top-1/3 -translate-y-1/3 text-[180px] font-bold text-black font-sans">
+         <h3 className="absolute right-8 top-1/3 -translate-y-1/3 text-[180px] font-bold text-black font-sans">
    ANTOR
   </h3>
-         <p className="absolute right-0 top-3/5 -translate-y-3/5 w-[500px] text- font-bold text-black font-sans">
-   I’m Ahmed Antor — Full Stack Developer (MERN) and Founder of ioxora, a web design & development agency that helps businesses build and manage web applications efficiently, delivering user-friendly solutions that support growth.
+         <p className="absolute right-0 z-50 top-3/5 -translate-y-3/5 w-[450px] text- font-bold text-black font-sans">
+   I’m Ahmed Antor — Full Stack Developer (MERN) and Founder of ioxora, a web design & development agency that helps businesses build and manage web .
   </p>
        
       
-         <Image className="relative -bottom-1 mx-auto" src={my} width={800} height={900} alt="myPhoto"/>
+         <Image className="relative right-8 -bottom-1  mx-auto grayscale" src={my} width={800} height={800} alt="myPhoto"/>
       
       </div>
            {/* <Image className="absolute bottom-0 right-0" src={log2} width={200} height={200} alt="myPhoto"/> */}
